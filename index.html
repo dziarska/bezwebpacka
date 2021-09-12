@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./img/favicon.png">
+    <script src="https://kit.fontawesome.com/071123a3c5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo"><img src="./img/logo.jpg"></div>
+            <ul class="options">
+                <li class="one">PROMOCJE</li>
+                <li class="two">INFORMACJE</li>
+                <li class="three">ZALOGUJ</li>
+                <li class="four">JĘZYK</li>
+            </ul>
+            <div class="mode-toggle">
+                <input type="checkbox" class="mode-checkbox" id="mode-checkbox">
+                <label for="mode-checkbox" class="label-check">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+                </label>
+            </div>
+        </nav>
+        <div class="reservation">
+            <div class="travel">
+                <div class="title-menu">
+
+                    <form class="choice">
+                        <div class="title">SZUKAJ LOTU:</div>
+                        <div class="label-container">
+                            <label for="oneway" class="radio-input">
+                                <input type="radio" id="oneway" name="oneway" value="oneway" class="default-radio">
+                                <div class="radio-button"></div>
+                                W jedną stronę
+                            </label><br>
+                            <label for="twoway" class="radio-input">
+                                <input type="radio" id="twoway" name="oneway" value="twoway" class="default-radio">
+                                <div class="radio-button"></div>
+                            W dwie strony
+                            </label><br>
+                        </div>
+                </div>
+                <div class="reservation-menu">
+                    <div class="departure">
+                        <label for="departureCity"></label>
+                        <select name="departureCity" id="departureCity" form="departureCity">
+                        <!--<option value="wylot">Miasto</option>-->
+                            <option value="Kraków">Kraków</option>
+                            <option value="Warszawa">Warszawa</option>
+                            <option value="Tokio">Tokio</option>
+                            <option value="Paryż">Paryż</option>
+                        </select>
+                        <span class="custom-arrow"></span>
+                    </div>
+                    <div class="arrival">
+                        <label for="arrivalCity"></label>
+                        <select name="arrivalCity" id="arrivalCity" form="arrivalCity">
+                            <option value="Tokio">Tokio</option>
+                            <option value="Kraków">Kraków</option>
+                            <option value="Warszawa">Warszawa</option>
+                            
+                            <option value="Paryż">Paryż</option>
+                        </select>
+                        <span class="custom-arrow"></span>
+                    </div>
+                </div>
+                <div class="date">
+                    
+                    <input type="date" name="departureDate" id="datePicker" min="2021-02-28">
+                    <label for="departureDate"></label>
+                    <label for="arrivalDate"></label>
+                    <input type="date" name="arrivalDate" id="datePicker" min="2021-03-01">
+                    
+                </div>
+                <div class="submit-btn">
+                    <a href=rezerwacja.html>SZUKAJ</a>
+                </div>
+                </form>
+            </div>
+        </div>
+    
+        <div class="weather">
+        <div class="weatherIcon"><i class="fas fa-sun"></i></div>
+            <div class="weatherCity">miasto</div>
+            <div id="temperature"></div>
+        </div>
+
+    </div>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="./index.js"></script>
+
+</body>
+</html>

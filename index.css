@@ -1,0 +1,461 @@
+
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+            object-fit: contain;    
+            
+            
+        }
+        
+        body{
+            background-image: url(./img/light-sky.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background 0.2s linear;
+            /* width: 100vw; */
+        
+        
+            /* width: 100vw;
+            height: auto;
+            display: flex; */
+        }
+        
+        body.dark{
+            background-image: url(./img/night-bcg.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .container{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: "navbar navbar navbar navbar navbar navbar"
+            " reservation reservation reservation reservation reservation reservation"
+            " reservation reservation reservation reservation reservation reservation"
+            " reservation reservation reservation reservation reservation reservation"
+            " reservation reservation reservation reservation reservation reservation"
+            ". . weather weather . ."
+            ". . . . . ."
+            "footer footer footer footer footer footer";
+        
+        }
+        
+        .navbar{
+            justify-content: space-between;
+            grid-area: navbar;
+            align-items: center;
+            display: flex;
+        }
+        
+        .mode-toggle {
+            /* padding-top: 5px*/
+            padding-bottom: 10px;
+            align-items: center;
+            justify-self: center;
+        }
+        
+        .label-check{
+            display: flex;
+            border-radius: 50px;
+            height: 1.2rem;
+            width: 50px;
+            background-color: #6B98BB;
+            justify-content: space-between;
+            padding: 4px;
+            margin-right: 15px;
+            padding-right: 4px;
+            position: relative;
+            align-items: center;
+        }
+        
+        .label-container{
+            justify-content: space-between;
+            width: 70%;
+            display: flex;
+        }
+        
+        .fa-moon{
+            color: #f7f19f;
+        }
+        
+        .fa-sun{
+            color: #f7f19f;
+        }
+        
+        .ball{
+            background-color: white;
+            position: absolute;
+            height: 1.2rem;
+            top: 3px;
+            left: 2px;
+            width: 20px;
+            border-radius: 50%;
+            transition: transform 0.2s linear;
+        }
+        
+        .mode-checkbox{
+            opacity: 0;
+            position: absolute;
+        }
+        
+        .mode-checkbox:checked + .label-check .ball {
+            transform: translateX(35px);
+        }
+        
+        .logo img{
+            /* width: 10vw;
+            height: 15vh;
+            padding: 10px;
+            margin: 0; */
+            border-radius: 50%;
+            padding: 10px;
+            height: 100px;
+            width: 100px;
+        } 
+        
+        
+        
+        .options{
+            justify-content: space-between;
+            display: flex;
+            padding: 2rem;
+            width: fit-content;
+        
+        
+        }
+        
+        .options > li{
+            list-style: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            padding: 2rem;
+            padding-top: 1rem;
+        
+        }
+        
+        
+        .reservation{
+            grid-area: reservation;
+            width: fit-content;
+            height: 40vh;
+            background: #ffffff;
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            justify-self: center;
+            background: linear-gradient(rgba(174, 188, 216, 0.7), rgba(111, 108, 127, 0.4));
+            border-radius: 30px;
+            padding-top: 20px;
+            justify-content: space-between; 
+            display: flex;
+            color: #ffffff;
+        }
+        
+        
+        .travel{
+            /* display: flex; */
+            justify-self: center;
+            /* padding-top: 3vh; */
+            padding-right: 2vw;
+            padding-left: 2vw;
+            width:70vw;
+        }
+        
+        .title-menu{
+            padding: 10px 0px 15px 0px;
+            justify-self: right;
+        }
+        
+        .choice{
+            display: flex;
+            justify-content: space-evenly;
+            /* width: 100%;
+            height: 20%; */
+            /* justify-content: start; */
+            /* justify-self: right; */
+            /* padding-left: 1vw;
+            padding-right: 5vw; */
+            /* padding: 10px; */
+        }
+        /* 
+        .choice:first-child{
+            justify-self: left;
+        } */
+        
+        
+        
+        .reservation-menu{
+            justify-content: center;
+            justify-items: center;
+        
+        }
+        
+        .arrival{
+            position: relative;
+            width: 40%;
+        }
+        
+        .departure{
+            position: relative;
+            margin-right: 3vw;
+        }
+        
+        select{
+            box-shadow: 0 5px 10px rgb(106, 144, 169);
+            font-size: 1.5 rem;
+            padding:  .7em 5em .7em 1.5em;
+            background-color: white;
+            color: #000000;
+            border: 0;
+            height: 5vh;
+            width: 27vw;
+            border-radius: 10px;
+        }
+        
+        .custom-arrow{
+            background:#6B98BB;
+            display: block;
+            width: 2rem;
+            height: 5vh;
+            position: absolute;
+            top:0;
+            right: 0;
+            pointer-events: none;
+            border-radius: 8px;
+        }
+        
+        .custom-arrow::before, .custom-arrow::after{
+            --size: .7em;
+        
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            /* top: 70%; */
+            transform: translate(-50%, -50%);
+        }
+        /* 
+        .custom-arrow::before{
+            border-left: var(--size) solid transparent;
+            border-right: var(--size) solid transparent;
+            border-bottom: var(--size) solid #ffffff;
+            top: 30%;
+        } */
+        
+        .custom-arrow::after{
+            border-left: var(--size) solid transparent;
+            border-right: var(--size) solid transparent;
+            border-top: var(--size) solid #ffffff;
+            top:70%;
+        }
+        
+        .reservation input{
+        
+        width: 11vw;
+        height: 4vh;
+        padding-right: 0px;
+        padding-left: 2vw;
+        border-radius: 8px;
+        border-color: #6B98BB;
+        border: 2px solid #6B98BB;
+        /* background-color: #A39FFF;
+        color:white; */
+        }
+        
+        .date{
+            justify-content: space-between;
+            /* width: 100%; */
+            display: flex;
+            padding-top: 2vh;
+            padding-left: 1vw;
+            padding-right: 2.1vw;
+        }
+        
+        .title{
+            align-items:flex-start;
+            width: 30%;
+        
+        }
+        
+        .reservation-menu{
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        
+        
+        .radio-input{
+            display: inline-flex;
+            margin-right: 10px;
+            cursor: pointer;
+            align-items: flex-end;
+            width: 100%;
+        }
+        
+        .default-radio{
+            display: none;
+        }
+        
+        .radio-button{
+            width:1.2em;
+            height: 1.2em;
+            border: 2px solid #6B98BB;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-sizing: border-box;
+            padding: 2px;
+        }
+        
+        
+        
+        .radio-button::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            background:#6B98BB;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.15s;
+        }
+        
+        .default-radio:checked + .radio-button::after {
+            transform: scale(1);
+        }
+        
+        .submit-btn{
+            padding-top: 5vh;
+            padding-left: 30vw;
+            width: 15vw;
+        }
+        
+        button{
+            width: 14vw;
+            height: 5vh;
+            border-radius: 5px;
+            border-color:#6c86a4;
+            background-color: #6B98BB;
+            box-shadow: 0 5px 10px #466278;
+            color: white;
+            font-weight: 700;
+        }
+
+        .weather{
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            grid-area: weather;
+        }
+
+        .plane{
+            /* //justify-content: center;
+            //align-items: center;
+            // height: 30vh;
+            // width: 30vw;
+            // margin-left: 20vw; */
+            background-image: url(./img/United_Airlines_Boeing_737-800_F.svg);
+            background-repeat: no-repeat;
+            display: flex;
+        
+        }
+
+
+        
+
+        img{
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw; 
+         
+        }
+        footer{
+            grid-area: footer;
+        }
+        .seat{
+            width:15px;
+            height: 15px;
+            border-radius: 30%;
+        }
+  
+.row {
+    justify-content: space-between;
+    width: 140px;
+    height: 20px;
+    display: flex;
+    padding-left: 129px;
+}
+.roA{
+    padding-left: 1px;
+}
+
+.rowB{
+    padding-right: 1px;
+}
+.rowEco1 {
+    padding-right: 1px;
+    display: inline;
+}
+.rowEco2{
+    display: inline;
+    padding-right: 12px;
+}
+
+.seatWrapper{
+    width: 600px;
+    height: 1300px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 108px;
+ 
+}
+
+.firstClass{
+    padding-top: 165px;
+    padding-bottom: 20px;
+}
+
+.firstClass .seat{
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+}
+
+.firstClass .row{
+    padding-bottom: 20px;
+    padding-left: 122.5px;
+}
+
+button{
+    border-color: none;
+}
+
+.seat:hover{
+    background-color: red;
+}
+
+.checkout{
+    padding-top: 100px;
+    border-radius: 30px;
+    /* //background: linear-gradient(rgb(203 215 238 / 70%), rgb(98 148 192)); */
+    background: linear-gradient(rgb(203,215,238), rgb(98,148,192));
+    height: 300px;
+    width: 300px;
+    
+}
+
+.checkout h2{
+    text-align: center;
+    padding-bottom:10px;
+}
+
+.selected{
+    background-color: green;
+}

@@ -1,0 +1,18 @@
+sunred #9C3F5A
+darkblue #2B5088
+gray #B9B0B0
+
+light sunset
+top #B0CAED
+violet #BEBBF0
+3rd cloud #FFD8DF
+2ns cloud #C2DFFF
+1st #FFFFFF
+
+silver version
+2nd cloud #1F6795
+
+light version 
+2nd cloud 210, 233, 250,
+#D2E9FA
+3rd #6B98BB
