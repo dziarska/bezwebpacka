@@ -1,5 +1,4 @@
 
-// import style from "./index.scss"
 
 const checkbox = document.getElementById('mode-checkbox');
 
@@ -7,66 +6,36 @@ checkbox.addEventListener('change', ()=>{
     document.body.classList.toggle('dark');
 })
 
-//fetch("https://api.openweathermap.org/data/2.5/weather?q=" + arrivalCity.value +"&appid=16757cdb1c5e963cb82b1f47805831e7")
-//.then((resp) => resp.json()) // Transform the data into json
-//.then(function (data) {
-//console.log(data.main.temp - 273)
-//let temperature = (data.main.temp-273).toFixed()
-//document.getElementById("temperature").innerHTML += `<div id="temperature"> ${temperature}</div>`
-
-//});
-
 const selectArrivalcity = document.querySelector('.arrivalCity1');
 
 selectArrivalcity.addEventListener('change', (event) => {
   const result = document.querySelector('.arrcity');
   localStorage.setItem('arrcity', `${event.target.value}`);
-  
-//   fetch("https://api.openweathermap.org/data/2.5/weather?q=" + arrivalCity.value +"&appid=16757cdb1c5e963cb82b1f47805831e7")
-//   .then((resp) => resp.json()) // Transform the data into json
-//   .then(function (data) {
-//   console.log(data.main.temp - 273)
-//   let temperature = (data.main.temp-273).toFixed()
-//   document.getElementById("temperatureArrival").innerHTML += `<div id="temperatureArrival"> ${temperature}</div>`
-//   });
-
-
-
-
 });
+
+// document.getElementById('myButton').onclick = function () {
+//     location.href = "www.google.com"
+// }
+
+// const p = document.getElementById("myButton"); // Find the paragraph element in the page
+// p.onclick = showAlert; // Add onclick function to element
+  
+// function showAlert() {
+//  location.href = "www.google.com"}
+
+
+myButton.addEventListener('click', () =>{
+    const myButton = document.getElementById(myButton)
+    console.log('dziala');
+})
 
 const selectDeparturecity = document.querySelector('.departureCity1');
 
 selectDeparturecity.addEventListener('change', (event) => {
   const res = document.querySelector('.depcity');
   localStorage.setItem('depcity', `${event.target.value}`);
-//   fetch("https://api.openweathermap.org/data/2.5/weather?q=" + departureCity.value +"&appid=16757cdb1c5e963cb82b1f47805831e7")
-//   .then((resp) => resp.json()) // Transform the data into json
-//   .then(function (data) {
-//   //console.log(data.main.temp - 273)
-//   let temperature = (data.main.temp-273).toFixed()
-//   document.getElementById("temperatureDeparture").innerHTML += `<div id="temperatureDeparture"> ${temperature}</div>`
-
-//   })
- 
 
   });
-
-
-  
- 
- 
- 
-
-//const departureTemperature = document.querySelector('.departureCity1');
- // departureTemperature.addEventListener('change', (event) =>{
-   //  const deptemp = document.querySelector('#temperatureDeparture')
-   // localStorage.setItem('departuretemp',`${event.target.value}`);
-   
-  //})
-
-//const TemperatureCity = document.querySelector('#temperatureDeparture').innerHTML += `<div id="temperatureDeparture"> ${temperature}</div>`
-//console.log(TemperatureCity)
 
 
 const selectOneWay = document.querySelector('#oneway');
@@ -112,17 +81,11 @@ if(m<10){
     m='0'+m
 } 
 today =y+"-"+m+"-"+d;
-// console.log(today)
-// todayDate = document.querySelector(".departureDate")
-// todayDate.setAttribute(today)
 document.querySelector(".departureDate").setAttribute("min",today)
-
 var curdate = new Date(y, m, d)
-// console.log(curdate)
 d1 = curdate.getDate()
 m1 = curdate.getMonth();
 y1 = curdate.getFullYear();
-// console.log(d1,m1,y1)
 
 if(d1<10){
     d1='0'+d1
@@ -136,7 +99,3 @@ console.log(curdate)
 tommorow =y1+"-"+m1+"-"+d2;
 console.log(tommorow)
 document.querySelector(".arrivalDate").setAttribute("min",tommorow)
-// document.getElementsByClassName("arrivalDate").setAttribute("value",tommorow)
-
-// console.log(tommorow)
-

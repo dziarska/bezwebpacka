@@ -1,6 +1,3 @@
-
-//import style from "./index.scss"
-
 const checkbox = document.getElementById('mode-checkbox');
 
 checkbox.addEventListener('change', ()=>{
@@ -54,7 +51,6 @@ document.querySelector(".cityArrival").innerHTML = arrivalCityvalue;
 fetch("https://api.openweathermap.org/data/2.5/weather?q=" + departureCityvalue +"&appid=16757cdb1c5e963cb82b1f47805831e7")
   .then((resp) => resp.json()) // Transform the data into json
   .then(function (data) {
-  //console.log(data.main.temp - 273)
   let temperature = (data.main.temp-273).toFixed()
   let weatherDepartureicon = (data.weather[0].icon)
   document.getElementById("temperatureDeparture").innerHTML += `<div id="temperatureDeparture"> ${temperature} °C</div>`
@@ -66,10 +62,8 @@ let iconDeparture = "http://openweathermap.org/img/w/" + weatherDepartureicon + 
   fetch("https://api.openweathermap.org/data/2.5/weather?q=" + arrivalCityvalue +"&appid=16757cdb1c5e963cb82b1f47805831e7")
   .then((resp) => resp.json()) // Transform the data into json
   .then(function (data) {
-  //console.log(data.main.temp - 273)
   let temperature = (data.main.temp-273).toFixed()
   let weatherId = (data.weather[0].icon)
-//   console.log(weatherId)
   document.getElementById("temperatureArrival").innerHTML += `<div id="temperatureArrival"> ${temperature} °C</div>`;
   let iconArrival = "http://openweathermap.org/img/w/" + weatherId + ".png";
   document.querySelector('.iconArrival').src = "http://openweathermap.org/img/w/" + weatherId + ".png"
