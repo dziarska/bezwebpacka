@@ -346,11 +346,19 @@
         }
 
         .weather{
-            flex-direction: column;
             justify-content: center;
             display: flex;
-            align-items: center;
+            align-items: space-between;
             grid-area: weather;
+            justify-content: space-evenly;
+            border-radius: 30px;
+            /* //background: linear-gradient(rgb(203 215 238 / 70%), rgb(98 148 192)); */
+            /* background: linear-gradient(rgb(170, 200, 224, .09), rgb(210,223,250)); */
+           
+        }
+
+        .weatherDeparture, .weatherArrival{
+            margin-top: 40px;
         }
 
         .plane{
@@ -447,7 +455,7 @@ button{
     /* //background: linear-gradient(rgb(203 215 238 / 70%), rgb(98 148 192)); */
     background: linear-gradient(rgb(203,215,238), rgb(98,148,192));
     height: 300px;
-    width: 300px;
+    width: 500px;
     
 }
 
@@ -458,4 +466,19 @@ button{
 
 .selected{
     background-color: green;
+}
+
+.iconArrival, .iconDeparture{
+    width:50px;
+    height: 50px;
+}
+
+.seatSelect p{
+    padding-left: 10px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
 }

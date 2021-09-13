@@ -52,21 +52,21 @@
                 <div class="reservation-menu">
                     <div class="departure">
                         <label for="departureCity"></label>
-                        <select name="departureCity" id="departureCity" form="departureCity">
+                        <select name="departureCity" class="departureCity1" id="departureCity" form="departureCity">
                         <!--<option value="wylot">Miasto</option>-->
-                            <option value="Kraków">Kraków</option>
-                            <option value="Warszawa">Warszawa</option>
-                            <option value="Tokio">Tokio</option>
-                            <option value="Paryż">Paryż</option>
+                            <option value="Kraków" class='depcity'>Kraków</option>
+                            <option value="Warszawa" class='depcity'>Warszawa</option>
+                            <option value="Tokio" class='depcity'>Tokio</option>
+                            <option value="Paryż" class='depcity'>Paryż</option>
                         </select>
                         <span class="custom-arrow"></span>
                     </div>
                     <div class="arrival">
                         <label for="arrivalCity"></label>
-                        <select name="arrivalCity" id="arrivalCity" form="arrivalCity">
-                            <option value="Tokio">Tokio</option>
-                            <option value="Kraków">Kraków</option>
-                            <option value="Warszawa">Warszawa</option>
+                        <select name="arrivalCity" class="arrivalCity1" id="arrivalCity" form="arrivalCity">
+                            <option value="Tokio" class='arrcity'>Tokio</option>
+                            <option value="Kraków" class='arrcity'>Kraków</option>
+                            <option value="Warszawa" class='arrcity'>Warszawa</option>
                             
                             <option value="Paryż">Paryż</option>
                         </select>
@@ -75,24 +75,31 @@
                 </div>
                 <div class="date">
                     
-                    <input type="date" name="departureDate" id="datePicker" min="2021-02-28">
+                    <input type="date" name="departureDate" class="departureDate" id="datePicker" min="">
                     <label for="departureDate"></label>
                     <label for="arrivalDate"></label>
-                    <input type="date" name="arrivalDate" id="datePicker" min="2021-03-01">
+                    <input type="date" name="arrivalDate" class="arrivalDate" id="datePicker" min="">
                     
                 </div>
                 <div class="submit-btn">
-                    <a href=rezerwacja.html>SZUKAJ</a>
+                    <button><a href=rezerwacja.html>SZUKAJ</a></button>
                 </div>
                 </form>
             </div>
         </div>
     
-        <div class="weather">
-        <div class="weatherIcon"><i class="fas fa-sun"></i></div>
-            <div class="weatherCity">miasto</div>
-            <div id="temperature"></div>
-        </div>
+        <!-- <div class="weather">
+            <div class="weatherDeparture">
+        <div class="iconDeparture"><i class="fas fa-sun"></i></div>
+            
+            <p id="temperatureDeparture"></p>
+            </div>
+            <div class="weatherArrival">
+            <div class="iconArrival"><i class="fas fa-sun"></i></div>
+            <div id="temperatureArrival"></div>
+            </div>
+            
+        </div> -->
 
     </div>
         <footer>
