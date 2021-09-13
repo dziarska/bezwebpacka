@@ -69,3 +69,10 @@ let iconDeparture = "http://openweathermap.org/img/w/" + weatherDepartureicon + 
   document.querySelector('.iconArrival').src = "http://openweathermap.org/img/w/" + weatherId + ".png"
 })
 
+
+const selectSeat = document.querySelector('.seat')
+selectSeat.addEventListener('click', (event) => {
+    // const selectSeat = document.querySelector('.seat');
+    localStorage.setItem('seatList', event.target.value);
+    alert('dodano miejsce ' + event.target.value)
+  });

@@ -13,21 +13,58 @@ selectArrivalcity.addEventListener('change', (event) => {
   localStorage.setItem('arrcity', `${event.target.value}`);
 });
 
-// document.getElementById('myButton').onclick = function () {
-//     location.href = "www.google.com"
-// }
+document.getElementById('myButton').onclick = function () {
+    event.preventDefault();
+    const checkDeparture = localStorage.getItem("depcity")
+    const checkArrival =localStorage.getItem("arrcity")
+    const departureDate = localStorage.getItem("data wylotu")
+    const arrivalDate = localStorage.getItem("data powrotu")
+    console.log(departureDate)
+    console.log(arrivalDate)
+    console.log(checkArrival)
+    console.log(checkDeparture)
+    if(checkDeparture == null && checkArrival == null){
+        alert('Wybierz miasto wylotu i przylotu!')
+        return
+    }
+    if (checkDeparture == null){
+        alert('Wybierz miasto wylotu')
+        return
+    }
+    if (checkArrival == null){
+        alert('Wybierz miasto przylotu')
+        return
+    }
+if(arrivalDate == null && departureDate == null){
+    alert('Wybierz datę wylotu i przylotu!')
+        return
+}
+if(arrivalDate == null){
+    alert('Wybierz przylotu!')
+        return
+}
 
-// const p = document.getElementById("myButton"); // Find the paragraph element in the page
-// p.onclick = showAlert; // Add onclick function to element
+if(departureDate == null){
+    alert('Wybierz wylotu!')
+        return
+}
+
+
+    // if(checkArrival == null){
+    //     alert('Wybierz miasto przylotu!')
+    // }
+
+
+    if (checkDeparture === checkArrival){
+        alert('Miasto wylotu nie może być takie samo co przylotu');
+        return;
+    }
+    
   
-// function showAlert() {
-//  location.href = "www.google.com"}
+    location.href = "./rezerwacja.html";
+    console.log('cos')
+}
 
-
-myButton.addEventListener('click', () =>{
-    const myButton = document.getElementById(myButton)
-    console.log('dziala');
-})
 
 const selectDeparturecity = document.querySelector('.departureCity1');
 
@@ -95,7 +132,7 @@ if(m1<10){
 } 
 
 d2 = d1+1
-console.log(curdate)
+// console.log(curdate)
 tommorow =y1+"-"+m1+"-"+d2;
-console.log(tommorow)
+// console.log(tommorow)
 document.querySelector(".arrivalDate").setAttribute("min",tommorow)
