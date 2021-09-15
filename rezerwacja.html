@@ -497,13 +497,20 @@
                     <div class="checkout">
                         <h2>Wybierz miejsce</h2>
                         <div class="seatSelect">
-                            <p>Wylot z <span class="departureCity"></span></p>
-                            <p>Przylot do <span class="arrivalCity"></span></p>
-                            <p>Wybrano miejsce <span id="count"></span></p>
-                            <p>Data  wylotu <span class="departureDate"></span></p>
-                            <p>Data Powrotu <span class="arrivalDate"></span></p>
-                            <p>Liczba pasażerów <span id=""></span></p>
-                            <p>Cena <span id=""></span></p>
+                            <p>Wylot z: <span class="departureCity"></span></p>
+                            <p>Przylot do: <span class="arrivalCity"></span></p>
+                            <p>Liczba wybranych miejsc: <span id="count"></span></p>
+                            <p>Data  wylotu: <span class="departureDate"></span></p>
+                            <p>Data Powrotu: <span class="arrivalDate"></span></p>
+                            <p id="cokolwiek">Cena <span id="total"> </span></p>
+                            <p>Waluta
+                            <select class="selectCurrency" id="currency" form="currency" name="currency">
+                                <option value="wybierz">wybierz</option>
+                                <option value="PLN" class="PLN">PLN</option>
+                                <option value="EUR" class="EUR">EUR</option>
+                                <option value="USD" class="USD">USD</option>
+                            </select>
+                        </p>
                             <div class="weather">
                                 <div class="weatherDeparture">
                                     <p class="cityDeparture"></p>

@@ -454,7 +454,7 @@ button{
     border-radius: 30px;
     /* //background: linear-gradient(rgb(203 215 238 / 70%), rgb(98 148 192)); */
     background: linear-gradient(rgb(203,215,238), rgb(98,148,192));
-    height: 300px;
+    height: 350px;
     width: 500px;
     
 }
@@ -481,4 +481,10 @@ a{
     color: white;
     text-decoration: none;
     font-size: large;
+}
+
+.selectCurrency{
+    width: 150px;
+    font-size: 12px;
+    height: 30px;
 }
